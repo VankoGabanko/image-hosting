@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Now</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            background-image: url('https://raw.githubusercontent.com/VankoGabanko/image-hosting/3d0a89b3e08f34f16c02e3701d8ec227ba8ce5bd/SocialMediaLogo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        
+        .join-btn {
+            background-color: #009900; /* Darker green */
+            color: black;
+            font-size: 40px;
+            padding: 30px 60px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+            box-shadow: 0px 0px 30px #009900; /* Adjusted glow color */
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+        .join-btn:hover {
+            background-color: #006600; /* Even darker green on hover */
+            box-shadow: 0px 0px 50px #009900;
+        }
+        .hidden {
+            display: none;
+        }
+        .message {
+            color: #009900; /* Darker green for text */
+            font-size: 60px;
+            font-weight: bold;
+            display: none;
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            text-shadow: 2px 2px 10px #000;
+        }
+    </style>
+</head>
+<body>
+    <button id="join-btn" class="join-btn">Join Now</button>
+    <div id="message" class="message">Wait for instructions</div>
+
+    <script>
+        document.getElementById('join-btn').addEventListener('click', function() {
+            document.getElementById('join-btn').classList.add('hidden');
+            document.getElementById('message').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
